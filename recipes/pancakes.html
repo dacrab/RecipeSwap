@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<meta charset="UTF-8">
+		<title>RecipeSwap</title>
+		<link rel="stylesheet" href="../styles.css">
+		<style>
 
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>RecipeSwap</h1>	
+			<form class="search-form" action="#" method="get">
+				<input type="text" name="search" placeholder="Search recipes by ingredients">
+				<button type="submit">Search</button>
+			</form>
+			<br>
+			<nav>
+				<ul>
+					<li><a href="../main-file.html">Home</a></li>
+					<li><a href="../collections.html">Collections</a></li>
+					<li><a href="../profiles.html">Profile</a></li>
+					<li><a href="../main-file.html">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<div class="centered-element"><h2>Pancakes στην τοστιέρα</h2></div>
+				<div class="recipe">
+					<table>
+						<thead>
+						  <tr>
+							<th>Χρονος Εκτέλεσης</th>
+							<th>Βαθμος Δυσκολιας</th>
+							<th>Ποσοτητα</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td>10 λεπτά</td>
+							<td>Ευκολη (3)</td>
+							<td>6-8 Πιατα</td>
+						  </tr>
+						</tbody>
+					  </table>
+					  <br>
+					<img src="../images/pancakes.jpg" alt="pancakes" width="450">
+					<h3>Συστατικά:</h3>
+					<p>200 γρ. γιαούρτι στραγγιστό<br>
+						1 αυγό, μεσαίο<br>
+						1 κ.γ. εκχύλισμα βανίλιας, ή 1 βανιλίνη<br>
+						90 ml σπορέλαιο<br>
+						αλάτι<br>
+						50 γρ. κρυσταλλική ζάχαρη<br>
+						120 γρ. αλεύρι που φουσκώνει μόνο του<br>
+						1 κ.γ. μαγειρική σόδα<br>
+						<br>
+						<hr>
+						<h4>Για το σερβιρισμα:</h4>
+						μέλι<br>
+						φρούτα του δάσους<br>
+						φύλλα δυόσμου<br>
+						άχνη ζάχαρη
+						<br>
+						<hr>
+					<h3>Μέθοδος Εκτέλεσης</h3>
+					<p>Ρίχνουμε σε ένα μπολ το γιαούρτι, το αυγό, το εκχύλισμα βανίλιας, τη ζάχαρη, τα 50 ml σπορέλαιο και το αλάτι και ανακατεύουμε πολύ καλά με ένα κουτάλι. Τα υπόλοιπα 40 ml σπορέλαιο θα τα χρειαστούμε για το πασπάλισμα της τοστιέρας.<br>
+						Ανακατεύουμε σε ένα μπολ το αλεύρι και τη μαγειρική σόδα, τα προσθέτουμε στο μείγμα, και ανακατεύουμε ελαφρώς για 10 δευτερόλεπτα, ίσα-ίσα να αναμειχθούν τα υλικά.<br>
+						Τοποθετούμε μια τοστιέρα στον πάγκο εργασίας, τη συνδέουμε στο ρεύμα, και την αφήνουμε να ζεσταθεί. Αν έχουμε επιλογή για ρύθμιση της θερμοκρασίας, επιλέγουμε τη μέτρια.<br>
+						Αλείφουμε με 1 κ.γ. σπορέλαιο και τις 2 σχάρες της τοστιέρας χρησιμοποιώντας απορροφητικό χαρτί κουζίνας.<br>
+						Μεταφέρουμε 1 κ.σ. γεμάτη από το μείγμα στην τοστιέρα, κλείνουμε, και ψήνουμε για 2-3 λεπτά.<br>
+						Αφαιρούμε το pancake από την τοστιέρα, και επαναλαμβάνουμε την ίδια διαδικασία για το υπόλοιπο μείγμα, αλείφοντας κάθε φορά με 1 κ.γ. σπορέλαιο και τις 2 σχάρες.<br>
+						Σερβίρουμε με μέλι και φρούτα του δάσους, και γαρνίρουμε προαιρετικά με φύλλα δυόσμου και ζάχαρη άχνη.</p>
+						<div class="star-rating">
+							<input id="star-5" type="radio" name="rating" value="5">
+							<label for="star-5" title="5 stars">&#9733;</label>
+							<input id="star-4" type="radio" name="rating" value="4">
+							<label for="star-4" title="4 stars">&#9733;</label>
+							<input id="star-3" type="radio" name="rating" value="3">
+							<label for="star-3" title="3 stars">&#9733;</label>
+							<input id="star-2" type="radio" name="rating" value="2">
+							<label for="star-2" title="2 stars">&#9733;</label>
+							<input id="star-1" type="radio" name="rating" value="1">
+							<label for="star-1" title="1 star">&#9733;</label>
+						  </div>	
+							<br>
+						  <button onclick="goBack()">Πισω</button>
+						  <script>
+						  function goBack() {
+						  window.history.back();
+						  }
+						  </script>  
+				</div>
+			</section>
+<footer>
+<p>RecipeSwap &copy; 2023</p>
+</footer>
+</main>
+ </body>
+</html>
