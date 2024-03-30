@@ -43,6 +43,6 @@ Contact
 If you have any questions or feedback, feel free to reach out:
 
 GitHub: DaCrab
-Email: vaggeliskavouras6@gmail.com
+Email: [e-mail](vaggeliskavouras6@gmail.com)
 
 Make sure to save this content into a text document named `README.md` in the root directory of your Cooking Bl
