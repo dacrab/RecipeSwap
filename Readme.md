@@ -42,7 +42,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Contact
 If you have any questions or feedback, feel free to reach out:
 
-GitHub: DaCrab
+GitHub: [GitHub](github.com/dacrab)
 Email: [e-mail](vaggeliskavouras6@gmail.com)
 
 Make sure to save this content into a text document named `README.md` in the root directory of your Cooking Bl
