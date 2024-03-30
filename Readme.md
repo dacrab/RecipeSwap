@@ -42,7 +42,8 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Contact
 If you have any questions or feedback, feel free to reach out:
 
-GitHub: [GitHub] (https://github.com/dacrab)
-Email: [E-Mail] (vaggeliskavouras6@gmail.com)
+GitHub: [GitHub](https://github.com/dacrab)
+
+Email: [E-Mail](vaggeliskavouras6@gmail.com)
 
 Make sure to save this content into a text document named `README.md` in the root directory of your Cooking Bl
