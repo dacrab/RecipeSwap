@@ -1,6 +1,6 @@
-# Welcome to [Your Cooking Blog Name] 🍳
+# Welcome to RecipeSwap 🍳
 
-Welcome to [Your Cooking Blog Name]! This blog is dedicated to bringing you delicious recipes, cooking tips, and culinary inspiration to elevate your home cooking experience.
+Welcome to RecipeSwap! This blog is dedicated to bringing you delicious recipes, cooking tips, and culinary inspiration to elevate your home cooking experience.
 
 ## Live Demo
 
@@ -42,7 +42,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Contact
 If you have any questions or feedback, feel free to reach out:
 
-GitHub: wh1t3d3ath
+GitHub: DaCrab
 Email: vaggeliskavouras6@gmail.com
 
 Make sure to save this content into a text document named `README.md` in the root directory of your Cooking Bl
