@@ -1,10 +1,10 @@
-# Welcome to [Your Cooking Blog Name] 🍳
+# Welcome to RecipeSwap 🍳
 
-Welcome to [Your Cooking Blog Name]! This blog is dedicated to bringing you delicious recipes, cooking tips, and culinary inspiration to elevate your home cooking experience.
+Welcome to RecipeSwap! This blog is dedicated to bringing you delicious recipes, cooking tips, and culinary inspiration to elevate your home cooking experience.
 
 ## Live Demo
 
-👉 [Check out the live demo here!](https://dacrab.github.io/cooking-website/index.html) <!-- Replace '#' with your live demo link -->
+👉 [Check out the live demo here!](https://dacrab.github.io/cooking-website/index.html)
 
 ## Features
 
@@ -25,8 +25,8 @@ This Cooking Blog is built using:
 To run this Cooking Blog locally, follow these steps:
 
 1. Clone the repository:
-[   git clone https://github.com/yourusername/your-cooking-blog.git
-](https://github.com/wh1t3d3ath/cooking-website.git)
+[   git clone https://github.com/dacrab/cooking-website.git
+](https://github.com/dacrab/cooking-website.git)
 Open the index.html file in your preferred web browser.
 Contributing
 Contributions are welcome and encouraged! If you have any recipes, cooking tips, or feature suggestions, feel free to contribute.
@@ -42,7 +42,8 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Contact
 If you have any questions or feedback, feel free to reach out:
 
-GitHub: wh1t3d3ath
-Email: vaggeliskavouras6@gmail.com
+GitHub: [GitHub](https://github.com/dacrab)
+
+Email: [E-Mail](vaggeliskavouras6@gmail.com)
 
 Make sure to save this content into a text document named `README.md` in the root directory of your Cooking Bl
