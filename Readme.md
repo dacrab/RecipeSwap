@@ -4,7 +4,7 @@ Welcome to RecipeSwap! This blog is dedicated to bringing you delicious recipes,
 
 ## Live Demo
 
-👉 [Check out the live demo here!](https://dacrab.github.io/cooking-website/index.html)
+👉 [Check out the live demo here!](https://dacrab.github.io/RecipeSwap/)
 
 ## Features
 
@@ -25,8 +25,8 @@ This Cooking Blog is built using:
 To run this Cooking Blog locally, follow these steps:
 
 1. Clone the repository:
-[   git clone https://github.com/dacrab/cooking-website.git
-](https://github.com/dacrab/cooking-website.git)
+[   git clone https://github.com/dacrab/RecipeSwap.git
+](https://github.com/dacrab/RecipeSwap.git)
 Open the index.html file in your preferred web browser.
 Contributing
 Contributions are welcome and encouraged! If you have any recipes, cooking tips, or feature suggestions, feel free to contribute.
