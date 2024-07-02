@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="el">
 	<head>
-		<link rel="shortcut icon" type="x-icon" href="../images/bowl-food-solid.svg">		
 		<meta charset="UTF-8">
 		<title>RecipeSwap</title>
+		<link rel="shortcut icon" type="x-icon" href="../images/bowl-food-solid.svg">
 		<link rel="stylesheet" href="../styles.css">
-		<style>
-
-		</style>
 	</head>
 	<body>
 		<header>
 			<h1>RecipeSwap</h1>
-			<nav>	
-                <form class="search-form" action="url" method="get">
-                    <input type="text" name="search" placeholder="Search recipes by ingredients">
-                    <button type="submit">Search</button>
-                </form>
+			<nav>
+				<!-- Search form for recipes by ingredients -->
+				<form class="search-form" action="url" method="get">
+					<input type="text" name="search" placeholder="Search recipes by ingredients">
+					<button type="submit">Search</button>
+				</form>
 				<br>
+				<!-- Navigation menu -->
 				<ul>
 					<li class="active"><a href="../index.html">Home</a></li>
 					<li><a href="../collections.html">Collections</a></li>
@@ -26,26 +25,27 @@
 				</ul>
 			</nav>
 		</header>
-    <h1>Breakfast</h1>
-    <div class="recipe-grid">
-        <a href="../recipes/pancakes.html">
-            <div class="recipe-card">
-                <img src="../images/pancakes.jpg" width="2700" alt="pancakes">
-                <h2>Pancakes in the Toaster</h2>
-            </div>
-        </a>
-            <div class="recipe-card">
-                <h2>More</h2>
-            </div>
-            <div class="recipe-card">
-                <h2>Coming</h2>
-            </div>
-            <div class="recipe-card">
-                <h2>Soon</h2>
-            </div>
-    </div>
-	<footer>
-		<p>RecipeSwap &copy; 2023</p>
-		</footer>
-		 </body>
- </html>
+		<main>
+			<h1>Breakfast</h1>
+			<div class="recipe-grid">
+				<!-- Recipe card for Pancakes in the Toaster -->
+				<a href="../recipes/pancakes.html">
+					<div class="recipe-card">
+						<img src="../images/pancakes.jpg" width="2700" alt="pancakes">
+						<h2>Pancakes in the Toaster</h2>
+					</div>
+				</a>
+				<!-- Placeholder recipe cards -->
+				<div class="recipe-card">
+					<h2>More</h2>
+				</div>
+				<div class="recipe-card">
+					<h2>Coming</h2>
+				</div>
+				<div class="recipe-card">
+					<h2>Soon</h2>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

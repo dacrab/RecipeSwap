@@ -1,122 +1,142 @@
 <!DOCTYPE html>
 <html lang="el">
-	<head>
-	<link rel="shortcut icon" type="x-icon" href="../images/bowl-food-solid.svg">
-	<meta charset="UTF-8">
-	<title>RecipeSwap</title>
-	<link rel="stylesheet" href="../styles.css">
-	</head>
-	<body>
-		<header>
-			<h1>RecipeSwap</h1>
-			<nav>	
-                <form class="search-form" action="#" method="get">
-                    <input type="text" name="search" placeholder="Search recipes by ingredients">
-                    <button type="submit">Search</button>
-                </form>
-				<br>
-				<ul>
-					<li class="active"><a href="../main-file.html">Home</a></li>
-					<li><a href="../collections.html">Collections</a></li>
-					<li><a href="../profiles.html">Profile</a></li>
-					<li><a href="../login.html">Login</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<section>
-				<div class="centered-element"><h2>Grandma's Easter Soup</h2></div>
-				<div class="recipe">
-					<table>
-						<thead>
-						  <tr>
-							<th>Execution time</th>
-							<th>Level of difficulty</th>
-							<th>Quantity</th>
-						  </tr>
-						</thead>
-						<tbody>
-						  <tr>
-							<td>30 Minutes</td>
-							<td>Medium (5)</td>
-							<td>6 Plates</td>
-						  </tr>
-						</tbody>
-					  </table>
-					  <br>
-					<img src="../images/mageiritsa.jpg" alt="mageiritsa" width="450">
-					<h3>Ingredients:</h3>
-					<p>Half a kilo of lamb liver<br>
-					1/2 Lemon<br>
-					2-3 Rosemary Clips<br>
-					3 T.S. Olive Oil<br>
-					1 Onion<br>
-					1 Garlic Cloves<br>
-					¼ Bunch of Dill<br>
-					7 Spring Onions<br>
-					1,5 Liters of Water<br>
-					Chicken Cube<br>
-					Salt<br>
-					Pepper<br>
-					2 Lettuces</p>
-					<br>
-						<hr>
-						<br>
-						<h4>For the Egg Mixture: </h4>
-						<p>2 Eggs, Medium<br>
-						Lemon Zest , from 2 Lemons<br>
-						Lemon Juice , from 2 Lemons<br>
-					  	 2 T.S Corn Flour</p>
-						<br>
-						<hr>
-                        <br>
-					<h3>Execution Method</h3>
-					<p>Place a pot over high heat, add water, salt and bay leaves, and bring to a boil.<br>
-					Add the liver in the pot, squeeze the lemon and add the lemon rind.<br>
-					Add the rosemary and boil for 15-20 minutes. Occasionally dip the liver with a spoon<br>
-					Remove the pot from the heat, transfer the liver to a chopping board and finely chop it.<br>
-					Place a second pot over high heat, add the olive oil and let it burn.<br>
-					Finely chop the onion and garlic on a chopping board, add them to the pot, and sauté for 1-2 minutes.<br>
-					Finely chop the dill stems, add them to the pot and set the leaves aside.<br>
-					Finely chop the white part of the spring onions, add them to the pot, and keep the green part aside.<br>
-					Add the liver, stir with a wooden spoon and sauté for 7-8 minutes, until nicely browned. <br>
-					Add the water, bouillon cube, salt and pepper, and mix.<br>
-					Lower the heat, cover the pot with the lid and simmer for 20-30 minutes.<br>
-					Finely chop the lettuce, dill and the green part of the spring onions that we kept, and add them to the pot..</p>
-					<br>
-					<hr>
-					<br>
-					<h4>For the egg mixture: </h4>
-						<p>In a bowl, add the eggs, lemon zest, lemon juice and cornstarch, and mix well with a hand whisk.<br>
-							Place a sieve in the pot, submerge it and with a ladle take the filtered water, slowly pour it into the bowl and stir vigorously with a hand whisk. Pour a total of 5-6 tablespoons.<br>
-							Pour all the egg lemon into the pot and mix with a spoon.<br>
-							Remove the pot from the heat<br>
-							Serve with olive oil and pepper.</p>
-
-							<div class="star-rating">
-								<input id="star-5" type="radio" name="rating" value="5">
-								<label for="star-5" title="5 stars">&#9733;</label>
-								<input id="star-4" type="radio" name="rating" value="4">
-								<label for="star-4" title="4 stars">&#9733;</label>
-								<input id="star-3" type="radio" name="rating" value="3">
-								<label for="star-3" title="3 stars">&#9733;</label>
-								<input id="star-2" type="radio" name="rating" value="2">
-								<label for="star-2" title="2 stars">&#9733;</label>
-								<input id="star-1" type="radio" name="rating" value="1">
-								<label for="star-1" title="1 star">&#9733;</label>
-							  </div>	
-							  <br>
-							  <button onclick="goBack()">Back</button>
-							  <script>
-							  function goBack() {
-							  window.history.back();
-							  }
-							  </script>  
-				</div>
-			</section>
- <footer>
-     <p>RecipeSwap &copy; 2023</p>
-	</footer>
-</main>
- </body>
+<head>
+    <meta charset="UTF-8">
+    <title>RecipeSwap</title>
+    <link rel="shortcut icon" type="x-icon" href="../images/bowl-food-solid.svg">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>RecipeSwap</h1>
+        <nav>
+            <!-- Search form for recipes by ingredients -->
+            <form class="search-form" action="#" method="get">
+                <input type="text" name="search" placeholder="Search recipes by ingredients">
+                <button type="submit">Search</button>
+            </form>
+            <br>
+            <!-- Navigation menu -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../collections.html">Collections</a></li>
+                <li><a href="../profiles.html">Profile</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="centered-element">
+                <h2>Grandma's Easter Soup</h2>
+            </div>
+            <div class="recipe">
+                <!-- Recipe details table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Execution time</th>
+                            <th>Level of difficulty</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>30 Minutes</td>
+                            <td>Medium (5)</td>
+                            <td>6 Plates</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <!-- Recipe image -->
+                <img src="../images/mageiritsa.jpg" alt="mageiritsa" width="450">
+                <!-- Ingredients list -->
+                <h3>Ingredients:</h3>
+                <p>
+                    Half a kilo of lamb liver<br>
+                    1/2 Lemon<br>
+                    2-3 Rosemary Clips<br>
+                    3 T.S. Olive Oil<br>
+                    1 Onion<br>
+                    1 Garlic Cloves<br>
+                    ¼ Bunch of Dill<br>
+                    7 Spring Onions<br>
+                    1.5 Liters of Water<br>
+                    Chicken Cube<br>
+                    Salt<br>
+                    Pepper<br>
+                    2 Lettuces
+                </p>
+                <br>
+                <hr>
+                <br>
+                <!-- Egg mixture ingredients -->
+                <h4>For the Egg Mixture:</h4>
+                <p>
+                    2 Eggs, Medium<br>
+                    Lemon Zest, from 2 Lemons<br>
+                    Lemon Juice, from 2 Lemons<br>
+                    2 T.S Corn Flour
+                </p>
+                <br>
+                <hr>
+                <br>
+                <!-- Execution method -->
+                <h3>Execution Method</h3>
+                <p>
+                    Place a pot over high heat, add water, salt and bay leaves, and bring to a boil.<br>
+                    Add the liver in the pot, squeeze the lemon and add the lemon rind.<br>
+                    Add the rosemary and boil for 15-20 minutes. Occasionally dip the liver with a spoon.<br>
+                    Remove the pot from the heat, transfer the liver to a chopping board and finely chop it.<br>
+                    Place a second pot over high heat, add the olive oil and let it burn.<br>
+                    Finely chop the onion and garlic on a chopping board, add them to the pot, and sauté for 1-2 minutes.<br>
+                    Finely chop the dill stems, add them to the pot and set the leaves aside.<br>
+                    Finely chop the white part of the spring onions, add them to the pot, and keep the green part aside.<br>
+                    Add the liver, stir with a wooden spoon and sauté for 7-8 minutes, until nicely browned.<br>
+                    Add the water, bouillon cube, salt and pepper, and mix.<br>
+                    Lower the heat, cover the pot with the lid and simmer for 20-30 minutes.<br>
+                    Finely chop the lettuce, dill and the green part of the spring onions that we kept, and add them to the pot.
+                </p>
+                <br>
+                <hr>
+                <br>
+                <!-- Egg mixture preparation -->
+                <h4>For the egg mixture:</h4>
+                <p>
+                    In a bowl, add the eggs, lemon zest, lemon juice and cornstarch, and mix well with a hand whisk.<br>
+                    Place a sieve in the pot, submerge it and with a ladle take the filtered water, slowly pour it into the bowl and stir vigorously with a hand whisk. Pour a total of 5-6 tablespoons.<br>
+                    Pour all the egg lemon into the pot and mix with a spoon.<br>
+                    Remove the pot from the heat.<br>
+                    Serve with olive oil and pepper.
+                </p>
+                <!-- Star rating system -->
+                <div class="star-rating">
+                    <input id="star-5" type="radio" name="rating" value="5">
+                    <label for="star-5" title="5 stars">&#9733;</label>
+                    <input id="star-4" type="radio" name="rating" value="4">
+                    <label for="star-4" title="4 stars">&#9733;</label>
+                    <input id="star-3" type="radio" name="rating" value="3">
+                    <label for="star-3" title="3 stars">&#9733;</label>
+                    <input id="star-2" type="radio" name="rating" value="2">
+                    <label for="star-2" title="2 stars">&#9733;</label>
+                    <input id="star-1" type="radio" name="rating" value="1">
+                    <label for="star-1" title="1 star">&#9733;</label>
+                </div>
+                <br>
+                <!-- Back button -->
+                <button onclick="goBack()">Back</button>
+                <script>
+                    function goBack() {
+                        window.history.back();
+                    }
+                </script>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> RecipeSwap. All rights reserved.</p>
+    </footer>
+    <script src="../script.js"></script>
+</body>
 </html>

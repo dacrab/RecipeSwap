@@ -1,52 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-   <head>
-      <link rel="shortcut icon" type="x-icon" href="./images/bowl-food-solid.svg">
-      <meta charset="utf-8">
-      <title>Login RecipeSwap</title>
-      <link rel="stylesheet" href="styles.css">
-   </head>
-   <body>
-      <header>
-      <h1>RecipeSwap</h1>
-      <nav>	
-         <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="collections.html">Collections</a></li>
-            <li><a href="profiles.html">Profile</a></li>
-            <li><a href="login.html">Login</a></li>
-         </ul>
-      </nav>
-   </header>
-      <div class="wrapper">
-         <div class="title">
-            Login Form
-         </div>
-         <form action="#">
-            <div class="field">
-               <input type="text" required>
-               <label>Email Address</label>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>RecipeSwap</title>
+    
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Header section containing the website title and navigation menu -->
+    <header>
+        <h1>RecipeSwap</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="profiles.html">Profile</a></li>
+                <li class="active"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content section containing the login form -->
+    <main>
+        <div class="wrapper">
+            <div class="title">
+                <h2>Login</h2>
             </div>
-            <div class="field">
-               <input type="password" required>
-               <label>Password</label>
-            </div>
-            <div class="content">
-               <div class="checkbox">
-                  <input type="checkbox" id="remember-me">
-                  <label for="remember-me">Remember me</label>
-               </div>
-               <div class="pass-link">
-                  <a href="forgot-password.html">Forgot password?</a>
-               </div>
-            </div>
-            <div class="field">
-               <input type="submit" value="Login">
-            </div>
-            <div class="signup-link">
-               Not a member? <a href="signup.html">Signup now</a>
-            </div>
-         </form>
-      </div>
-   </body>
+            <form>
+                <!-- Email input field -->
+                <div class="field">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                
+                <!-- Password input field -->
+                <div class="field">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                
+                <!-- Submit button -->
+                <div class="field">
+                    <input type="submit" value="Login">
+                </div>
+                
+                <!-- Link to sign up page -->
+                <div class="signup-link">
+                    Don't have an account? <a href="signup.html">Sign up now</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer section containing copyright information -->
+    <footer>
+        <p>&copy; <span id="year"></span> RecipeSwap. All rights reserved.</p>
+    </footer>
+</body>
+
 </html>

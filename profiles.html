@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="el">
 	<head>
-		<link rel="shortcut icon" type="x-icon" href="./images/bowl-food-solid.svg">
 		<meta charset="UTF-8">
 		<title>RecipeSwap | Profile</title>
+		<link rel="shortcut icon" type="x-icon" href="./images/bowl-food-solid.svg">
 		<link rel="stylesheet" href="styles.css">
+		<script src="script.js"></script>
 	</head>
 	<body>
 		<header>
 			<h1>RecipeSwap</h1>
 			<nav>	
+                <!-- Search Form -->
                 <form class="search-form" action="#" method="get">
                     <input type="text" name="search" placeholder="Search recipes by ingredients">
                     <button type="submit">Search</button>
                 </form>
 				<br>
+				<!-- Navigation Links -->
 				<ul>
 					<li class="active"><a href="index.html">Home</a></li>
 					<li><a href="collections.html">Collections</a></li>
@@ -25,28 +28,35 @@
 		</header>
 		<main>
 			<section class="profile">
+				<!-- User Image -->
 				<div class="user-image">
-					<img src="images/pfp.jpg" alt="profile-pic" width="200"></div>
-                 <div class="user-info">
+					<img src="images/pfp.jpg" alt="profile-pic" width="200">
+				</div>
+				<!-- User Information -->
+				<div class="user-info">
 					<h2>George Papadopoulos</h2>
 					<h4>Email:</h4>
-                        <p>giorgos.papadopoulos@gmail.com</p>
-				         <h4>Location:</h4>
-                         <p>New York, NY</p>
-						 <h4>Hobby: </h4>
-						 <P>Cooking , Traveling , Photos</p>
-							<button class="button">Edit(Coming Soon...)
-							</button>	
-                </div>
+					<p>giorgos.papadopoulos@gmail.com</p>
+					<h4>Location:</h4>
+					<p>New York, NY</p>
+					<h4>Hobby:</h4>
+					<p>Cooking, Traveling, Photos</p>
+					<button class="button">Edit (Coming Soon...)</button>
+				</div>
+				<!-- User Recipes -->
 				<div class="user-recipes">
-					<div class="centered-element"><h2>My Recipes</h2></div>
+					<div class="centered-element">
+						<h2>My Recipes</h2>
+					</div>
+					<!-- Recipe 1 -->
 					<div class="recipe">
-						<img src="images/pancakes.jpg" alt="pancakes" >
+						<img src="images/pancakes.jpg" alt="pancakes">
 						<h3>Pancakes in the Toaster</h3>
 						<p>If you're looking for the perfect sweet recipe for Sunday brunch, then make pancakes in the toaster. Easy, quick and without using a pan.</p>
 						<a href="recipes/pancakes.html" class="button">Show</a>
 					</div>
 					<br>
+					<!-- Recipe 2 -->
 					<div class="recipe">
 						<img src="images/mageiritsa.jpg" alt="mageiritsa" width="450">
 						<h3>Grandma's Easter Soup</h3>
@@ -55,9 +65,9 @@
 					</div>
 				</div>
 			</section>
+		</main>
 		<footer>
-			<p>&copy; 2023 RecipeSwap</p>
+			<p>&copy; <span id="year"></span> RecipeSwap</p>
 		</footer>
-	</main>
-	 </body>
-   </html>
+	</body>
+</html>

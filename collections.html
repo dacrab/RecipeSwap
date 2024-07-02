@@ -2,40 +2,45 @@
 <html lang="el">
 	<head>
 		<meta charset="UTF-8">
+		<!-- Favicon -->
 		<link rel="shortcut icon" type="x-icon" href="./images/bowl-food-solid.svg">
 		<title>RecipeSwap</title>
+		<!-- Stylesheet -->
 		<link rel="stylesheet" href="styles.css">
 	</head>
-	<header>
-<body>
-
-    <h1>RecipeSwap</h1>
-    <nav>
-        <form class="search-form" action="url" method="get">
-            <input type="text" name="search" placeholder="Search recipes by ingredients">
-            <button type="submit">Search</button>
-        </form>
-        <br>
-        <ul>
-            <li class="active"> <a href="index.html">Home</a></li>
-            <li><a href="collections.html">Collections</a></li>
-            <li><a href="profiles.html">Profile</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <h1>Recipe Categories</h1>
-    <div class="recipe-grid">
-        <div class="recipe-card">
-            <img src="images/breakfast.png" alt="breakfast" width="150">
-            <a href="collections/breakfast.html" class="button">Breakfast</a>
-        </div>
-        <div class="recipe-card">
-            <img src="images/meal.png" alt="meal" width="150">
-            <a href="collections/meal.html" class="button">Main Meals</a>
-        </div>
-    </div>
-</main>
-</body>
+	<body>
+		<header>
+			<h1>RecipeSwap</h1>
+			<nav>
+				<!-- Search Form -->
+				<form class="search-form" action="url" method="get">
+					<input type="text" name="search" placeholder="Search recipes by ingredients">
+					<button type="submit">Search</button>
+				</form>
+				<br>
+				<!-- Navigation Links -->
+				<ul>
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="collections.html">Collections</a></li>
+					<li><a href="profiles.html">Profile</a></li>
+					<li><a href="login.html">Login</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h1>Recipe Categories</h1>
+			<div class="recipe-grid">
+				<!-- Breakfast Category -->
+				<div class="recipe-card">
+					<img src="images/breakfast.png" alt="breakfast" width="150">
+					<a href="collections/breakfast.html" class="button">Breakfast</a>
+				</div>
+				<!-- Main Meals Category -->
+				<div class="recipe-card">
+					<img src="images/meal.png" alt="meal" width="150">
+					<a href="collections/meal.html" class="button">Main Meals</a>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>

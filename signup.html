@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RecipeSwap</title>
-<link rel="stylesheet" href="styles.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeSwap</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
-
-<header>
-    <h1>RecipeSwap</h1>
-    <nav>	
-        <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="collections.html">Collections</a></li>
-            <li><a href="profiles.html">Profile</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-    <div class="wrapper">
-        <div class="title">
-        <h2>Sign Up</h2>
-    </div>
-        <form>
-            <div class="field">
-                <input type="text" id="username" required>
-                <label for="username">Username</label>
+    <header>
+        <h1>RecipeSwap</h1>
+        <nav>	
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="profiles.html">Profile</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="title">
+                <h2>Sign Up</h2>
             </div>
-            <div class="field">
-                <input type="email" id="email" required>
-                <label for="email">Email</label>
-            </div>
-            <div class="field">
-                <input type="password" id="password" required>
-                <label for="password">Password</label>
-            </div>
-            <div class="field">
-                <input type="password" id="password" required>
-                <label for="password">Enter Password Again</label>
-            </div>
-            <div class="field">
-            <input type="submit" value="Sign Up">
+            <form>
+                <!-- Username Field -->
+                <div class="field">
+                    <input type="text" id="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <!-- Email Field -->
+                <div class="field">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <!-- Password Field -->
+                <div class="field">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <!-- Confirm Password Field -->
+                <div class="field">
+                    <input type="password" id="confirm-password" required>
+                    <label for="confirm-password">Enter Password Again</label>
+                </div>
+                <!-- Submit Button -->
+                <div class="field">
+                    <input type="submit" value="Sign Up">
+                </div>
+                <!-- Login Link -->
+                <div class="signup-link">
+                    Already have an account? <a href="login.html">Login now</a>
+                </div>
+            </form>
         </div>
-        <div class="signup-link">
-            Already have an account? <a href="login.html">Login now</a>
-         </div>
-        </form>
-    </div>
-</main>
-
-<footer>
-    <p>&copy; 2024 RecipeSwap. All rights reserved.</p>
-</footer>
-
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> RecipeSwap. All rights reserved.</p>
+    </footer>
 </body>
 </html>
