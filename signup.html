@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeSwap</title>
+    <title>RecipeSwap - Sign Up</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,38 +21,34 @@
     </header>
     <main>
         <div class="wrapper">
-            <div class="title">
-                <h2>Sign Up</h2>
-            </div>
-            <form>
-                <!-- Username Field -->
+            <h2 class="title">Sign Up</h2>
+            <form id="signup-form" novalidate>
                 <div class="field">
-                    <input type="text" id="username" required>
+                    <input type="text" id="username" name="username" required minlength="3" maxlength="20" pattern="[a-zA-Z0-9_]+" aria-describedby="username-help">
                     <label for="username">Username</label>
+                    <small id="username-help">3-20 characters, letters, numbers, and underscores only</small>
                 </div>
-                <!-- Email Field -->
                 <div class="field">
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" name="email" required aria-describedby="email-help">
                     <label for="email">Email</label>
+                    <small id="email-help">Enter a valid email address</small>
                 </div>
-                <!-- Password Field -->
                 <div class="field">
-                    <input type="password" id="password" required>
+                    <input type="password" id="password" name="password" required minlength="8" aria-describedby="password-help">
                     <label for="password">Password</label>
+                    <small id="password-help">At least 8 characters long</small>
                 </div>
-                <!-- Confirm Password Field -->
                 <div class="field">
-                    <input type="password" id="confirm-password" required>
-                    <label for="confirm-password">Enter Password Again</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required aria-describedby="confirm-password-help">
+                    <label for="confirm-password">Confirm Password</label>
+                    <small id="confirm-password-help">Passwords must match</small>
                 </div>
-                <!-- Submit Button -->
                 <div class="field">
-                    <input type="submit" value="Sign Up">
+                    <button type="submit">Sign Up</button>
                 </div>
-                <!-- Login Link -->
-                <div class="signup-link">
+                <p class="login-link">
                     Already have an account? <a href="login.html">Login now</a>
-                </div>
+                </p>
             </form>
         </div>
     </main>

@@ -11,11 +11,11 @@
 		<header>
 			<h1>RecipeSwap</h1>
 			<nav>	
-                <!-- Search Form -->
-                <form class="search-form" action="#" method="get">
-                    <input type="text" name="search" placeholder="Search recipes by ingredients">
-                    <button type="submit">Search</button>
-                </form>
+				<!-- Search Form -->
+				<form class="search-form" action="#" method="get">
+					<input type="text" name="search" placeholder="Search recipes by ingredients">
+					<button type="submit">Search</button>
+				</form>
 				<br>
 				<!-- Navigation Links -->
 				<ul>
@@ -28,40 +28,36 @@
 		</header>
 		<main>
 			<section class="profile">
-				<!-- User Image -->
-				<div class="user-image">
-					<img src="images/pfp.jpg" alt="profile-pic" width="200">
-				</div>
 				<!-- User Information -->
 				<div class="user-info">
+					<!-- User Image -->
+					<div class="user-image">
+						<img src="images/pfp.jpg" alt="profile-pic" width="200">
+					</div>
 					<h2>George Papadopoulos</h2>
-					<h4>Email:</h4>
-					<p>giorgos.papadopoulos@gmail.com</p>
-					<h4>Location:</h4>
-					<p>New York, NY</p>
-					<h4>Hobby:</h4>
-					<p>Cooking, Traveling, Photos</p>
-					<button class="button">Edit (Coming Soon...)</button>
+					<p><strong>Email:</strong> giorgos.papadopoulos@gmail.com</p>
+					<p><strong>Location:</strong> New York, NY</p>
+					<p><strong>Hobbies:</strong> Cooking, Traveling, Photos</p>
+					<button class="button">Edit Profile</button>
 				</div>
 				<!-- User Recipes -->
 				<div class="user-recipes">
-					<div class="centered-element">
-						<h2>My Recipes</h2>
-					</div>
-					<!-- Recipe 1 -->
-					<div class="recipe">
-						<img src="images/pancakes.jpg" alt="pancakes">
-						<h3>Pancakes in the Toaster</h3>
-						<p>If you're looking for the perfect sweet recipe for Sunday brunch, then make pancakes in the toaster. Easy, quick and without using a pan.</p>
-						<a href="recipes/pancakes.html" class="button">Show</a>
-					</div>
-					<br>
-					<!-- Recipe 2 -->
-					<div class="recipe">
-						<img src="images/mageiritsa.jpg" alt="mageiritsa" width="450">
-						<h3>Grandma's Easter Soup</h3>
-						<p>The traditional soup eaten on the evening of Holy Saturday after the Resurrection, cooked with liver and lamb intestines, vegetables and herbs. After the Lenten fast, it is the first dish containing meat, so we eat it to properly prepare our stomachs for the next day.</p>
-						<a href="recipes/mageiritsa.html" class="button">Show</a>
+					<h2>My Recipes</h2>
+					<div class="recipe-grid">
+						<!-- Recipe 1 -->
+						<div class="recipe">
+							<img src="images/pancakes.jpg" alt="pancakes">
+							<h3>Pancakes in the Toaster</h3>
+							<p>If you're looking for the perfect sweet recipe for Sunday brunch, then make pancakes in the toaster. Easy, quick and without using a pan.</p>
+							<a href="recipes/pancakes.html" class="button">Show Recipe</a>
+						</div>
+						<!-- Recipe 2 -->
+						<div class="recipe">
+							<img src="images/mageiritsa.jpg" alt="mageiritsa" width="450">
+							<h3>Grandma's Easter Soup</h3>
+							<p>The traditional soup eaten on the evening of Holy Saturday after the Resurrection, cooked with liver and lamb intestines, vegetables and herbs. After the Lenten fast, it is the first dish containing meat, so we eat it to properly prepare our stomachs for the next day.</p>
+							<a href="recipes/mageiritsa.html" class="button">Show Recipe</a>
+						</div>
 					</div>
 				</div>
 			</section>
