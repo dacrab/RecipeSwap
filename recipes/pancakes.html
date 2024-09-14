@@ -1,91 +1,80 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>RecipeSwap</title>
-    <link rel="shortcut icon" type="x-icon" href="../images/bowl-food-solid.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeSwap - Pancakes In The Toaster</title>
+    <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/fluency/48/kawaii-taco.png">
     <link rel="stylesheet" href="../styles.css">
-    <script src="../script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>RecipeSwap</h1>
-        <nav>
-            <!-- Search form for recipes by ingredients -->
-            <form class="search-form" action="#" method="get">
-                <input type="text" name="search" placeholder="Search recipes by ingredients">
-                <button type="submit">Search</button>
-            </form>
-            <br>
-            <!-- Navigation menu -->
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../collections.html">Collections</a></li>
-                <li><a href="../profiles.html">Profile</a></li>
-                <li><a href="../login.html">Login</a></li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fas fa-utensils"></i> RecipeSwap</h1>
+            <nav>
+                <form class="search-form" action="/search" method="get">
+                    <input type="text" name="search" placeholder="Search recipes by ingredients" aria-label="Search recipes">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <ul class="nav-links">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../collections.html"><i class="fas fa-book-open"></i> Collections</a></li>
+                    <li><a href="../profiles.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="../login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <div class="centered-element">
-                <h2>Pancakes In The Toaster</h2>
+    <main class="container">
+        <article class="recipe">
+            <header class="recipe-header">
+                <h1><i class="fas fa-pancakes"></i> Pancakes In The Toaster</h1>
+                <div class="recipe-meta">
+                    <span><i class="fas fa-clock"></i> Prep: 10 Minutes</span>
+                    <span><i class="fas fa-chart-line"></i> Difficulty: Easy (3/10)</span>
+                    <span><i class="fas fa-utensils"></i> Servings: 6-8</span>
+                </div>
+            </header>
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=800&q=80" alt="Delicious pancakes served with berries" class="recipe-image">
+            <div class="recipe-content">
+                <section class="ingredients">
+                    <h2><i class="fas fa-list"></i> Ingredients</h2>
+                    <ul class="ingredients-list">
+                        <li>200g Greek yogurt</li>
+                        <li>1 large free-range egg</li>
+                        <li>1 tsp vanilla bean paste</li>
+                        <li>90ml coconut oil</li>
+                        <li>Pinch of Himalayan salt</li>
+                        <li>50g coconut sugar</li>
+                        <li>120g gluten-free self-raising flour</li>
+                        <li>1 tsp baking powder</li>
+                    </ul>
+                    <h3>For serving:</h3>
+                    <ul class="ingredients-list">
+                        <li>Organic maple syrup</li>
+                        <li>Mixed berries</li>
+                        <li>Fresh mint leaves</li>
+                        <li>Organic powdered sugar</li>
+                    </ul>
+                </section>
+                <section class="instructions">
+                    <h2><i class="fas fa-tasks"></i> Instructions</h2>
+                    <ol class="instructions-list">
+                        <li>In a bowl, whisk together Greek yogurt, egg, vanilla bean paste, coconut sugar, 50ml coconut oil, and Himalayan salt.</li>
+                        <li>In another bowl, mix gluten-free flour and baking powder. Gently fold into the wet mixture until just combined.</li>
+                        <li>Preheat your toaster oven to medium setting.</li>
+                        <li>Lightly brush both racks of the toaster oven with coconut oil using a silicone brush.</li>
+                        <li>Spoon 1 tablespoon of batter onto each rack. Cook for 2-3 minutes or until golden brown.</li>
+                        <li>Carefully remove pancakes and repeat the process, brushing racks with oil between batches.</li>
+                        <li>Serve warm, drizzled with maple syrup, topped with mixed berries, fresh mint leaves, and a light dusting of organic powdered sugar.</li>
+                    </ol>
+                </section>
             </div>
-            <div class="recipe">
-                <!-- Recipe details table -->
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Execution Time</th>
-                            <th>Difficulty Degree</th>
-                            <th>Quantity</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>10 Minutes</td>
-                            <td>Easy (3)</td>
-                            <td>6-8 Plates</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br>
-                <img src="../images/pancakes.jpg" alt="pancakes" width="450">
-                <h3>Ingredients:</h3>
-                <p>
-                    200 g. strained yoghurt<br>
-                    1 Egg, Medium<br>
-                    1 teaspoon vanilla extract, or 1 vanillin<br>
-                    90 ml Seed oil<br>
-                    Salt<br>
-                    50 g granulated sugar<br>
-                    120 g self-raising flour<br>
-                    1 teaspoon of baking soda<br>
-                </p>
-                <br>
-                <hr>
-                <h4>For serving:</h4>
-                <p>
-                    Honey<br>
-                    Forest Fruits<br>
-                    Mint leaves<br>
-                    Powdered Sugar<br>
-                </p>
-                <br>
-                <hr>
-                <h3>Execution Method</h3>
-                <p>
-                    <!-- Step-by-step instructions for making the pancakes -->
-                    In a bowl, add the yogurt, egg, vanilla extract, sugar, 50 ml of seed oil and salt and mix well with a spoon. The remaining 40 ml of seed oil will be used to coat the toaster.<br>
-                    Combine the flour and baking soda in a bowl, add them to the mixture, and stir gently for 10 seconds, just to mix the ingredients.<br>
-                    Place a toaster on the counter, plug it in, and let it warm up. If you have an option for a temperature setting, select medium.<br>
-                    Coat all 2 racks of the toaster oven with 1 teaspoon of seed oil using paper towels.<br>
-                    Transfer 1 tablespoon full of the mixture to the toaster oven, cover, and bake for 2-3 minutes.<br>
-                    Remove the pancake from the toaster, and repeat the same process for the rest of the mixture, brushing each time with 1 teaspoon of seed oil and the 2 grills.<br>
-                    Serve with honey and forest fruits, and optionally garnish with mint leaves and icing sugar.
-                </p>
+            <section class="rating">
+                <h2><i class="fas fa-star"></i> Rate this Recipe</h2>
                 <div class="star-rating">
-                    <!-- Star rating system -->
                     <input id="star-5" type="radio" name="rating" value="5">
                     <label for="star-5" title="5 stars">&#9733;</label>
                     <input id="star-4" type="radio" name="rating" value="4">
@@ -97,21 +86,20 @@
                     <input id="star-1" type="radio" name="rating" value="1">
                     <label for="star-1" title="1 star">&#9733;</label>
                 </div>
-                <br>
-                <button onclick="goBack()">Back</button>
-                <script>
-                    /**
-                     * Function to navigate back to the previous page
-                     */
-                    function goBack() {
-                        window.history.back();
-                    }
-                </script>
-            </div>
-        </section>
+            </section>
+            <button onclick="window.history.back()" class="back-button"><i class="fas fa-arrow-left"></i> Back</button>
+        </article>
     </main>
-    <footer>
-        <p>&copy; <span id="year"></span> RecipeSwap. All rights reserved.</p>
+    <footer class="main-footer">
+        <div class="container">
+            <p><i class="far fa-copyright"></i> <span id="current-year"></span> RecipeSwap. All rights reserved.</p>
+        </div>
     </footer>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

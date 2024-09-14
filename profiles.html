@@ -1,69 +1,63 @@
 <!DOCTYPE html>
-<html lang="el">
-	<head>
-		<meta charset="UTF-8">
-		<title>RecipeSwap | Profile</title>
-		<link rel="shortcut icon" type="x-icon" href="./images/bowl-food-solid.svg">
-		<link rel="stylesheet" href="styles.css">
-		<script src="script.js"></script>
-	</head>
-	<body>
-		<header>
-			<h1>RecipeSwap</h1>
-			<nav>	
-				<!-- Search Form -->
-				<form class="search-form" action="#" method="get">
-					<input type="text" name="search" placeholder="Search recipes by ingredients">
-					<button type="submit">Search</button>
-				</form>
-				<br>
-				<!-- Navigation Links -->
-				<ul>
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="collections.html">Collections</a></li>
-					<li><a href="profiles.html">Profile</a></li>
-					<li><a href="login.html">Login</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<section class="profile">
-				<!-- User Information -->
-				<div class="user-info">
-					<!-- User Image -->
-					<div class="user-image">
-						<img src="images/pfp.jpg" alt="profile-pic" width="200">
-					</div>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RecipeSwap - User Profile</title>
+	<link rel="shortcut icon" type="image/png" href="https://img.icons8.com/fluency/48/kawaii-taco.png">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<header>
+		<h1><i class="fas fa-utensils"></i> RecipeSwap</h1>
+		<nav>
+			<form class="search-form" action="/search" method="get">
+				<input type="text" name="search" placeholder="Search recipes by ingredients" aria-label="Search recipes">
+				<button type="submit"><i class="fas fa-search"></i></button>
+			</form>
+			<ul>
+				<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+				<li><a href="collections.html"><i class="fas fa-book-open"></i> Collections</a></li>
+				<li class="active"><a href="profiles.html"><i class="fas fa-user"></i> Profile</a></li>
+				<li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="profile">
+			<div class="profile-header">
+				<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Profile picture of George Papadopoulos" class="profile-picture">
+				<div class="profile-info">
 					<h2>George Papadopoulos</h2>
-					<p><strong>Email:</strong> giorgos.papadopoulos@gmail.com</p>
-					<p><strong>Location:</strong> New York, NY</p>
-					<p><strong>Hobbies:</strong> Cooking, Traveling, Photos</p>
-					<button class="button">Edit Profile</button>
+					<p><i class="fas fa-envelope"></i> giorgos.papadopoulos@gmail.com</p>
+					<p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+					<p><i class="fas fa-heart"></i> Cooking, Traveling, Photos</p>
+					<button class="button"><i class="fas fa-edit"></i> Edit Profile</button>
 				</div>
-				<!-- User Recipes -->
-				<div class="user-recipes">
-					<h2>My Recipes</h2>
-					<div class="recipe-grid">
-						<!-- Recipe 1 -->
-						<div class="recipe">
-							<img src="images/pancakes.jpg" alt="pancakes">
-							<h3>Pancakes in the Toaster</h3>
-							<p>If you're looking for the perfect sweet recipe for Sunday brunch, then make pancakes in the toaster. Easy, quick and without using a pan.</p>
-							<a href="recipes/pancakes.html" class="button">Show Recipe</a>
-						</div>
-						<!-- Recipe 2 -->
-						<div class="recipe">
-							<img src="images/mageiritsa.jpg" alt="mageiritsa" width="450">
-							<h3>Grandma's Easter Soup</h3>
-							<p>The traditional soup eaten on the evening of Holy Saturday after the Resurrection, cooked with liver and lamb intestines, vegetables and herbs. After the Lenten fast, it is the first dish containing meat, so we eat it to properly prepare our stomachs for the next day.</p>
-							<a href="recipes/mageiritsa.html" class="button">Show Recipe</a>
-						</div>
-					</div>
+			</div>
+			<div class="user-recipes">
+				<h2><i class="fas fa-book"></i> My Recipes</h2>
+				<div class="recipe-grid">
+					<article class="recipe-card">
+						<img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Traditional Greek Easter soup">
+						<h3><i class="fa-solid fa-bowl-food"></i> Grandma's Easter Soup</h3>
+						<p>The traditional soup eaten on the evening of Holy Saturday after the Resurrection, cooked with liver and lamb intestines, vegetables and herbs.</p>
+						<a href="recipes/mageiritsa.html" class="button"><i class="fas fa-eye"></i> View Recipe</a>
+					</article>
+					<article class="recipe-card">
+						<img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Pancakes in the toaster">
+						<h3><i class="fas fa-bread-slice"></i> Pancakes in the Toaster</h3>
+						<p>If you're looking for the perfect sweet recipe for Sunday brunch, then make pancakes in the toaster. Easy, quick and without using a pan.</p>
+						<a href="recipes/pancakes.html" class="button"><i class="fas fa-eye"></i> View Recipe</a>
+					</article>
 				</div>
-			</section>
-		</main>
-		<footer>
-			<p>&copy; <span id="year"></span> RecipeSwap</p>
-		</footer>
-	</body>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p><i class="far fa-copyright"></i> <span id="current-year"></span> RecipeSwap. All rights reserved.</p>
+	</footer>
+</body>
 </html>

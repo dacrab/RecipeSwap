@@ -2,115 +2,84 @@
 <html lang="el">
 <head>
     <meta charset="UTF-8">
-    <title>RecipeSwap</title>
-    <link rel="shortcut icon" type="x-icon" href="../images/bowl-food-solid.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeSwap - Grandma's Easter Soup</title>
+    <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/fluency/48/kawaii-taco.png">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>RecipeSwap</h1>
-        <nav>
-            <!-- Search form for recipes by ingredients -->
-            <form class="search-form" action="#" method="get">
-                <input type="text" name="search" placeholder="Search recipes by ingredients">
-                <button type="submit">Search</button>
-            </form>
-            <br>
-            <!-- Navigation menu -->
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../collections.html">Collections</a></li>
-                <li><a href="../profiles.html">Profile</a></li>
-                <li><a href="../login.html">Login</a></li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fas fa-utensils"></i> RecipeSwap</h1>
+            <nav>
+                <form class="search-form" action="/search" method="get">
+                    <input type="text" name="search" placeholder="Search recipes by ingredients" aria-label="Search recipes">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <ul class="nav-links">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../collections.html"><i class="fas fa-book-open"></i> Collections</a></li>
+                    <li><a href="../profiles.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="../login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <div class="centered-element">
-                <h2>Grandma's Easter Soup</h2>
+    <main class="container">
+        <article class="recipe">
+            <header class="recipe-header">
+                <h1><i class="fa-solid fa-bowl-food"></i> Grandma's Easter Soup (Mageiritsa)</h1>
+                <div class="recipe-meta">
+                    <span><i class="fas fa-clock"></i> Prep: 30 Minutes</span>
+                    <span><i class="fas fa-chart-line"></i> Difficulty: Medium (5/10)</span>
+                    <span><i class="fas fa-utensils"></i> Servings: 6</span>
+                </div>
+            </header>
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=800&q=80" alt="Grandma's Easter Soup" class="recipe-image">
+            <div class="recipe-content">
+                <section class="ingredients">
+                    <h2><i class="fas fa-list"></i> Ingredients</h2>
+                    <ul class="ingredients-list">
+                        <li>500g lamb liver</li>
+                        <li>1/2 lemon</li>
+                        <li>2-3 rosemary sprigs</li>
+                        <li>3 tbsp olive oil</li>
+                        <li>1 onion</li>
+                        <li>1 garlic clove</li>
+                        <li>1/4 bunch of dill</li>
+                        <li>7 spring onions</li>
+                        <li>1.5 liters of water</li>
+                        <li>1 chicken bouillon cube</li>
+                        <li>Salt and pepper to taste</li>
+                        <li>2 lettuces</li>
+                    </ul>
+                    <h3>For the Egg-Lemon Mixture:</h3>
+                    <ul class="ingredients-list">
+                        <li>2 medium eggs</li>
+                        <li>Zest of 2 lemons</li>
+                        <li>Juice of 2 lemons</li>
+                        <li>2 tbsp corn flour</li>
+                    </ul>
+                </section>
+                <section class="instructions">
+                    <h2><i class="fas fa-tasks"></i> Instructions</h2>
+                    <ol class="instructions-list">
+                        <li>Boil water with salt and bay leaves. Add liver, lemon juice, lemon rind, and rosemary. Cook for 15-20 minutes.</li>
+                        <li>Remove liver, chop finely.</li>
+                        <li>In a new pot, sauté chopped onion and garlic in olive oil.</li>
+                        <li>Add dill stems and white parts of spring onions. Sauté.</li>
+                        <li>Add chopped liver, sauté for 7-8 minutes until browned.</li>
+                        <li>Add water, bouillon cube, salt, and pepper. Simmer for 20-30 minutes.</li>
+                        <li>Add chopped lettuce, dill, and green parts of spring onions.</li>
+                        <li>Prepare egg-lemon mixture: Whisk eggs, lemon zest, lemon juice, and cornstarch.</li>
+                        <li>Temper the egg mixture with hot broth, then add to the pot.</li>
+                        <li>Remove from heat and serve with olive oil and pepper.</li>
+                    </ol>
+                </section>
             </div>
-            <div class="recipe">
-                <!-- Recipe details table -->
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Execution time</th>
-                            <th>Level of difficulty</th>
-                            <th>Quantity</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>30 Minutes</td>
-                            <td>Medium (5)</td>
-                            <td>6 Plates</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br>
-                <!-- Recipe image -->
-                <img src="../images/mageiritsa.jpg" alt="mageiritsa" width="450">
-                <!-- Ingredients list -->
-                <h3>Ingredients:</h3>
-                <p>
-                    Half a kilo of lamb liver<br>
-                    1/2 Lemon<br>
-                    2-3 Rosemary Clips<br>
-                    3 T.S. Olive Oil<br>
-                    1 Onion<br>
-                    1 Garlic Cloves<br>
-                    ¼ Bunch of Dill<br>
-                    7 Spring Onions<br>
-                    1.5 Liters of Water<br>
-                    Chicken Cube<br>
-                    Salt<br>
-                    Pepper<br>
-                    2 Lettuces
-                </p>
-                <br>
-                <hr>
-                <br>
-                <!-- Egg mixture ingredients -->
-                <h4>For the Egg Mixture:</h4>
-                <p>
-                    2 Eggs, Medium<br>
-                    Lemon Zest, from 2 Lemons<br>
-                    Lemon Juice, from 2 Lemons<br>
-                    2 T.S Corn Flour
-                </p>
-                <br>
-                <hr>
-                <br>
-                <!-- Execution method -->
-                <h3>Execution Method</h3>
-                <p>
-                    Place a pot over high heat, add water, salt and bay leaves, and bring to a boil.<br>
-                    Add the liver in the pot, squeeze the lemon and add the lemon rind.<br>
-                    Add the rosemary and boil for 15-20 minutes. Occasionally dip the liver with a spoon.<br>
-                    Remove the pot from the heat, transfer the liver to a chopping board and finely chop it.<br>
-                    Place a second pot over high heat, add the olive oil and let it burn.<br>
-                    Finely chop the onion and garlic on a chopping board, add them to the pot, and sauté for 1-2 minutes.<br>
-                    Finely chop the dill stems, add them to the pot and set the leaves aside.<br>
-                    Finely chop the white part of the spring onions, add them to the pot, and keep the green part aside.<br>
-                    Add the liver, stir with a wooden spoon and sauté for 7-8 minutes, until nicely browned.<br>
-                    Add the water, bouillon cube, salt and pepper, and mix.<br>
-                    Lower the heat, cover the pot with the lid and simmer for 20-30 minutes.<br>
-                    Finely chop the lettuce, dill and the green part of the spring onions that we kept, and add them to the pot.
-                </p>
-                <br>
-                <hr>
-                <br>
-                <!-- Egg mixture preparation -->
-                <h4>For the egg mixture:</h4>
-                <p>
-                    In a bowl, add the eggs, lemon zest, lemon juice and cornstarch, and mix well with a hand whisk.<br>
-                    Place a sieve in the pot, submerge it and with a ladle take the filtered water, slowly pour it into the bowl and stir vigorously with a hand whisk. Pour a total of 5-6 tablespoons.<br>
-                    Pour all the egg lemon into the pot and mix with a spoon.<br>
-                    Remove the pot from the heat.<br>
-                    Serve with olive oil and pepper.
-                </p>
-                <!-- Star rating system -->
+            <section class="rating">
+                <h2><i class="fas fa-star"></i> Rate this Recipe</h2>
                 <div class="star-rating">
                     <input id="star-5" type="radio" name="rating" value="5">
                     <label for="star-5" title="5 stars">&#9733;</label>
@@ -123,20 +92,15 @@
                     <input id="star-1" type="radio" name="rating" value="1">
                     <label for="star-1" title="1 star">&#9733;</label>
                 </div>
-                <br>
-                <!-- Back button -->
-                <button onclick="goBack()">Back</button>
-                <script>
-                    function goBack() {
-                        window.history.back();
-                    }
-                </script>
-            </div>
-        </section>
+            </section>
+            <button onclick="window.history.back()" class="back-button"><i class="fas fa-arrow-left"></i> Back</button>
+        </article>
     </main>
-    <footer>
-        <p>&copy; <span id="year"></span> RecipeSwap. All rights reserved.</p>
+    <footer class="main-footer">
+        <div class="container">
+            <p><i class="far fa-copyright"></i> <span id="current-year"></span> RecipeSwap. All rights reserved.</p>
+        </div>
     </footer>
-    <script src="../script.js"></script>
+    <script src="../script.js" defer></script>
 </body>
 </html>
