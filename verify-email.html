@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeSwap - Forgot Password</title>
+    <title>RecipeSwap - Verify Your Email</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/fluency/48/kawaii-taco.png">
@@ -24,17 +24,25 @@
     </header>
     <main>
         <div class="wrapper">
-            <h2 class="title">Forgot Password</h2>
-            <form id="forgot-password-form" novalidate>
+            <h2 class="title">Verify Your Email</h2>
+            <div id="verification-message">
+                <p>We've sent a verification email to <span id="user-email" class="highlighted-email"></span>. Please check your inbox and click the verification link to complete your registration.</p>
+            </div>
+            <form id="resend-verification-form">
                 <div class="field">
-                    <input type="email" id="email" name="email" placeholder=" " required>
-                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="submit" value="Resend Verification Email">
+                </div>
+            </form>
+            <div class="signup-link">
+                Entered the wrong email? <a href="#" id="change-email-link">Change your email</a>
+            </div>
+            <form id="change-email-form" style="display: none;">
+                <div class="field">
+                    <input type="email" id="new-email" name="new-email" placeholder=" " required>
+                    <label for="new-email"><i class="fas fa-envelope"></i> New Email</label>
                 </div>
                 <div class="field">
-                    <input type="submit" value="Reset Password">
-                </div>
-                <div class="signup-link">
-                    Remember your password? <a href="login.html">Login now</a>
+                    <input type="submit" value="Update Email">
                 </div>
             </form>
         </div>

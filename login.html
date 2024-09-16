@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/fluency/48/kawaii-taco.png">
-    <script src="script.js" defer></script>
+    <script src="script.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -17,11 +17,8 @@
                 <input type="text" name="search" placeholder="Search recipes by ingredients" aria-label="Search recipes">
                 <button type="submit"><i class="fas fa-search"></i></button>
             </form>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="collections.html"><i class="fas fa-book-open"></i> Collections</a></li>
-                <li><a href="profiles.html"><i class="fas fa-user"></i> Profile</a></li>
-                <li><a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+            <ul class="nav-links">
+                <!-- This will be populated dynamically by JavaScript -->
             </ul>
         </nav>
     </header>
@@ -58,8 +55,5 @@
     <footer>
         <p><i class="far fa-copyright"></i> <span id="current-year"></span> RecipeSwap. All rights reserved.</p>
     </footer>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
