@@ -1,31 +1,48 @@
-# Welcome to RecipeSwap 🍳
+# RecipeSwap 🍳
 
-RecipeSwap is a web application dedicated to bringing you delicious recipes, cooking tips, and culinary inspiration to elevate your home cooking experience. Share your favorite recipes and discover new ones from our community of food enthusiasts!
+RecipeSwap is a dynamic web application and blog that connects food enthusiasts, offering a platform to share, discover, and explore delicious recipes. Elevate your culinary skills, find inspiration for your next meal, and engage with a community of passionate cooks!
 
-## Live Demo
+## Quick Links
 
-👉 [Check out the live demo here!](https://dacrab.github.io/RecipeSwap/)
+- 🌐 [Live Demo](https://recipe-swap.netlify.app/)
+- 📧 [Contact Me](mailto:vkaouras@proton.me)
+- 🐙 [GitHub Repository](https://github.com/dacrab/RecipeSwap)
 
 ## Features
 
-- **Diverse Recipe Collection:** Explore a wide range of recipes for every occasion, from quick weeknight dinners to gourmet desserts.
-- **User-friendly Interface:** Easy-to-navigate design for seamless recipe browsing and sharing.
-- **Responsive Design:** Access RecipeSwap seamlessly from any device - desktop, tablet, or smartphone.
-- **User Accounts:** Create your personal profile to save favorite recipes and share your own culinary creations.
-- **Search Functionality:** Find recipes quickly by searching for ingredients or dish names.
-- **Recipe Rating System:** Rate and review recipes to help other users discover the best dishes.
+🍽️ **Diverse Recipe Collection & Blog**
+  - Explore recipes and blog posts for every occasion and skill level
+  - Quick weeknight dinners to gourmet desserts, with accompanying stories and tips
 
-## Technologies Used
+🖥️ **User-Friendly Interface**
+  - Intuitive design for easy recipe browsing, blog reading, and content sharing
+  - Responsive layout for seamless access on all devices
 
-RecipeSwap is built using:
+🔐 **Secure User Authentication**
+  - Create an account and verify your email
+  - Log in securely to access personalized features and contribute to the blog
 
-- HTML5
-- CSS3
-- JavaScript
+👤 **Personalized User Profiles**
+  - Save your favorite recipes and blog posts
+  - Share your own culinary creations and food stories
+
+🔍 **Advanced Search Functionality**
+  - Find recipes and blog posts quickly by ingredients, dish names, or topics
+
+⭐ **Community-Driven Rating System**
+  - Rate and review recipes and blog posts
+  - Help others discover the best dishes and most insightful content
+
+✍️ **Blog Functionality**
+  - Read and write blog posts about cooking techniques, ingredient spotlights, and culinary adventures
+  - Comment on and discuss blog posts with other food enthusiasts
+
+## Technology Stack
+
+- Frontend: HTML5, CSS3, JavaScript
+- Backend & Authentication: Supabase
 
 ## Getting Started
-
-To run RecipeSwap locally, follow these steps:
 
 1. Clone the repository:
    ```
@@ -35,27 +52,35 @@ To run RecipeSwap locally, follow these steps:
    ```
    cd RecipeSwap
    ```
-3. Open the `index.html` file in your preferred web browser.
+3. Set up Supabase:
+   - Create a new project on [Supabase](https://supabase.com/)
+   - Copy your project URL and anon key
+   - Update `config.js` with your Supabase credentials
+4. Open `index.html` in your web browser
+
+## User Authentication Flow
+
+1. **Sign Up**: Provide email and password
+2. **Email Verification**: Click the link sent to your email
+3. **Login**: Use verified credentials to access your account and blog features
 
 ## Contributing
 
-We welcome contributions to RecipeSwap! If you have recipes, cooking tips, or feature suggestions, please feel free to contribute:
+We welcome contributions to both the recipe platform and blog! Here's how you can help improve RecipeSwap:
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a pull request
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
+## Get in Touch
 
-If you have any questions or feedback, feel free to reach out:
+- 🐙 GitHub: [@dacrab](https://github.com/dacrab)
+- 📧 [Contact Me](mailto:vkaouras@proton.me)
 
-- GitHub: [dacrab](https://github.com/dacrab)
-- Email: vaggeliskavouras6@gmail.com
-
-Happy cooking with RecipeSwap! 🍽️👨‍🍳👩‍🍳
+Happy cooking and blogging with RecipeSwap! 👨‍🍳👩‍🍳📝
