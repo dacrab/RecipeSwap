@@ -80,7 +80,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Get in Touch
 
-- 🐙 GitHub: [@dacrab](https://github.com/dacrab)
+- 🐙 [Github](https://github.com/dacrab)
 - 📧 [Contact Me](mailto:vkaouras@proton.me)
 
 Happy cooking and blogging with RecipeSwap! 👨‍🍳👩‍🍳📝
