@@ -1,5 +1,5 @@
 /* Imports */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Lobster&family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap');
 
 /* Variables */
 :root {
@@ -43,7 +43,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 1.6rem;
+  font-size: var(--font-size);
   line-height: var(--line-height);
   color: var(--primary-color);
   background: linear-gradient(to right, #ff7e5f, #feb47b);
@@ -54,6 +54,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--primary-color);
 }
 
 /* Typography */
@@ -63,15 +64,14 @@ h1, h2 {
 }
 
 h1 {
-  color: var(--primary-color);
   font-size: 4rem;
-  font-family: 'Lobster', cursive;
+  font-family: 'Montserrat', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
   font-size: 3rem;
-  font-family: 'Montserrat', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Layout */
@@ -96,7 +96,7 @@ header {
 
 .highlighted-email {
   font-weight: bold;
-  color: #ff5e5e;
+  color: var(--tertiary-color);
   background-color: #ffe6e6;
   padding: 2px 5px;
   border-radius: 3px;
@@ -112,7 +112,6 @@ nav ul {
 }
 
 nav ul li a {
-  color: var(--primary-color);
   padding: 0.5rem 1rem;
   transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
   border-radius: var(--border-radius);
@@ -171,18 +170,16 @@ section {
   padding: 1.5rem;
   font-size: 2rem;
   font-weight: bold;
-  color: var(--primary-color);
-  text-align: center;
   background-color: rgba(255, 255, 255, 0.9);
   margin: 0;
 }
 
-.recipe-card p {
+.recipe-card p,
+.recipe-card h3 {
   margin: 1rem;
 }
 
 .recipe-card h3 {
-  margin: 1rem;
   display: flex;
   align-items: center;
 }
@@ -218,7 +215,6 @@ section {
 }
 
 .recipe-header {
-  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -228,7 +224,6 @@ section {
   gap: 2rem;
   margin-top: 1rem;
   font-size: 1.4rem;
-  color: var(--primary-color);
 }
 
 .recipe-image {
@@ -238,7 +233,7 @@ section {
   border-radius: var(--border-radius);
   margin: 0 auto 2rem;
   display: block;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 .recipe-content {
@@ -264,11 +259,15 @@ section {
   padding-left: 2rem;
 }
 
-.ingredients-list li:before {
-  content: '•';
+.ingredients-list li:before,
+.instructions-list li:before {
   position: absolute;
   left: 0;
   color: var(--tertiary-color);
+}
+
+.ingredients-list li:before {
+  content: '•';
 }
 
 .instructions-list li {
@@ -277,10 +276,7 @@ section {
 
 .instructions-list li:before {
   content: counter(step-counter);
-  position: absolute;
-  left: 0;
   font-weight: bold;
-  color: var(--tertiary-color);
 }
 
 .rating {
@@ -328,11 +324,10 @@ button:active,
 .search-form {
   display: flex;
   align-items: center;
-  border: none;
   border-radius: 5rem;
   padding: 1rem 2rem;
   background-color: var(--secondary-color);
-  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   transition: all var(--transition-speed) ease;
   width: 100%;
   max-width: 50rem;
@@ -369,12 +364,71 @@ button:active,
 .search-form button[type="submit"]:hover {
   background-color: #f83c3c;
   transform: translateY(-0.2rem);
-  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 .search-form i {
   color: var(--secondary-color);
   font-size: 1.6rem;
+}
+
+/* Search results styles */
+.search-results {
+  position: absolute;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+  max-height: 40rem;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 50rem;
+}
+
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.search-results li:last-child {
+  border-bottom: none;
+}
+
+.search-results a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.search-result-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.search-result-text {
+  flex-grow: 1;
+}
+
+.search-result-text .recipe-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.search-result-text .ingredient {
+  font-size: 0.9em;
+  color: var(--tertiary-color);
 }
 
 /* Footer styles */
@@ -389,22 +443,25 @@ footer {
 
 footer p {
   margin-bottom: 0.5rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Notification styles */
-.rating-notification {
+.notification {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: var(--tertiary-color);
-  color: var(--secondary-color);
   padding: 10px 20px;
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  color: #fff;
+  font-size: 1.4rem;
   z-index: 1000;
   animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-in 2.7s forwards;
 }
+
+.notification-info { background-color: #3498db; }
+.notification-success { background-color: #2ecc71; }
+.notification-error { background-color: #e74c3c; }
 
 /* Table styles */
 table {
@@ -415,8 +472,7 @@ table {
   display: block;
 }
 
-th,
-td {
+th, td {
   text-align: center;
   padding: 1.2rem;
   border: 1px solid var(--border-color);
@@ -500,7 +556,6 @@ tr:nth-child(even) {
 
 .stat-label {
   font-size: 1.4rem;
-  color: var(--primary-color);
 }
 
 .user-recipes h2 {
@@ -558,14 +613,12 @@ tr:nth-child(even) {
 }
 
 /* Form field styles */
-.wrapper form .field,
 .field {
   position: relative;
   width: 100%;
   margin-bottom: 2rem;
 }
 
-.wrapper form .field input,
 .field input {
   width: 100%;
   height: 5rem;
@@ -577,7 +630,6 @@ tr:nth-child(even) {
   transition: all var(--transition-speed) ease;
 }
 
-.wrapper form .field label,
 .field label {
   position: absolute;
   top: 50%;
@@ -590,15 +642,11 @@ tr:nth-child(even) {
 }
 
 /* Focus and valid states */
-.wrapper form .field input:focus,
-.wrapper form .field input:valid,
 .field input:focus,
 .field input:not(:placeholder-shown) {
   border-color: #4158d0;
 }
 
-.wrapper form .field input:focus ~ label,
-.wrapper form .field input:valid ~ label,
 .field input:focus + label,
 .field input:not(:placeholder-shown) + label {
   top: 0;
@@ -632,11 +680,9 @@ form .content .checkbox {
 form .content input {
   width: 1.5rem;
   height: 1.5rem;
-  background: red;
 }
 
 form .content label {
-  color: #262626;
   user-select: none;
   padding-left: 0.5rem;
 }
@@ -658,7 +704,7 @@ form .field input[type="submit"]:active {
 }
 
 form .signup-link {
-  color: #262626;
+  color: var(--primary-color);
   margin-top: 2rem;
   text-align: center;
 }
@@ -701,31 +747,6 @@ form .signup-link a:hover {
   }
 }
 
-/* Notification styles */
-.notification {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  border-radius: var(--border-radius);
-  color: #fff;
-  font-size: 1.4rem;
-  z-index: 1000;
-  animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-in 2.7s forwards;
-}
-
-.notification-info {
-  background-color: #3498db;
-}
-
-.notification-success {
-  background-color: #2ecc71;
-}
-
-.notification-error {
-  background-color: #e74c3c;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
   html { font-size: 55%; }
@@ -749,20 +770,17 @@ form .signup-link a:hover {
     width: 100%;
   }
   
-  .search-form input[type="text"] {
+  .search-form input[type="text"],
+  .search-form button[type="submit"] {
     width: 100%;
     margin-bottom: 1rem;
   }
-  
-  .search-form button[type="submit"] { width: 100%; }
   
   .recipe-card {
     padding: 1rem;
   }
   
   .recipe-card h2 { font-size: 1.8rem; }
-  
-  footer p { font-size: 1.4rem; }
   
   .recipe-card img {
     width: 100%;
@@ -773,6 +791,17 @@ form .signup-link a:hover {
     padding: 1rem;
   }
   
-  footer p { font-size: 0.9rem; }
-  footer .social-icons a { font-size: 1.2rem; }
+  footer p { font-size: 1.4rem; }
+  
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-header {
+    margin-bottom: 2rem;
+  }
+  
+  .profile-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
