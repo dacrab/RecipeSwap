@@ -1,5 +1,10 @@
 import { supabase } from './supabase.js';
 
+// Constants
+const NOTIFICATION_DURATION = 3000;
+const SEARCH_DEBOUNCE_DELAY = 300;
+const DEFAULT_RECIPE_IMAGE = 'https://img.freepik.com/free-vector/healthy-food-concept-illustration_114360-11817.jpg?t=st=1726588236~exp=1726591836~hmac=d0240d557f44477eb1d5efa203a9063fbe6b744930b6f1d9c5e9445677823b36&w=740';
+
 // Logger utility
 const logger = {
     info: (message, ...args) => console.info(`[INFO] ${message}`, ...args),
@@ -8,7 +13,7 @@ const logger = {
     debug: (message, ...args) => console.debug(`[DEBUG] ${message}`, ...args)
 };
 
-// DOM Elements object
+// DOM Elements
 const elements = {
     searchForm: document.querySelector('.search-form'),
     searchInput: document.querySelector('.search-form input[name="search"]'),
@@ -34,7 +39,7 @@ const utils = {
         const currentYear = new Date().getFullYear();
         elements.yearElements.forEach(el => el && (el.textContent = currentYear));
     },
-    showNotification: (message, type = 'info', duration = 3000) => {
+    showNotification: (message, type = 'info', duration = NOTIFICATION_DURATION) => {
         const notification = Object.assign(document.createElement('div'), {
             className: `notification notification-${type}`,
             textContent: message
@@ -61,18 +66,15 @@ const utils = {
     },
     displayError: (error) => {
         let userFriendlyMessage = 'Oops! Something went wrong. Please try again.';
-
         if (error.message) {
             userFriendlyMessage += ` Error details: ${error.message}`;
         }
-
         if (elements.errorContainer) {
             elements.errorContainer.textContent = userFriendlyMessage;
             elements.errorContainer.style.display = 'block';
         } else {
             utils.showNotification(userFriendlyMessage, 'error');
         }
-        
         logger.error('Detailed error:', error);
     }
 };
@@ -84,9 +86,7 @@ const authFunctions = {
             const { data, error } = await supabase.auth.signUp({
                 email,
                 password,
-                options: {
-                    data: { username }
-                }
+                options: { data: { username } }
             });
             if (error) throw error;
             utils.showNotification('Welcome aboard! We\'ve sent you a verification email. Please check your inbox to complete your registration.', 'success', 5000);
@@ -146,10 +146,7 @@ const authFunctions = {
     },
     resendVerificationEmail: async (email) => {
         try {
-            const { error } = await supabase.auth.resend({
-                type: 'signup',
-                email: email
-            });
+            const { error } = await supabase.auth.resend({ type: 'signup', email: email });
             if (error) throw error;
             utils.showNotification('We\'ve resent the verification email. It should arrive in your inbox shortly.', 'success');
         } catch (error) {
@@ -254,7 +251,7 @@ const eventHandlers = {
             utils.displayError(error);
             elements.searchResults.innerHTML = '<p>An error occurred while searching. Please try again.</p>';
         }
-    }, 300),
+    }, SEARCH_DEBOUNCE_DELAY),
 
     handleStarRating: (event) => {
         if (event.target.matches('input[type="radio"]')) {
@@ -376,7 +373,7 @@ const displaySearchResults = (results, query) => {
                 : '';
 
             const img = document.createElement('img');
-            img.src = recipe.image_url || 'https://img.freepik.com/free-vector/healthy-food-concept-illustration_114360-11817.jpg?t=st=1726588236~exp=1726591836~hmac=d0240d557f44477eb1d5efa203a9063fbe6b744930b6f1d9c5e9445677823b36&w=740';
+            img.src = recipe.image_url || DEFAULT_RECIPE_IMAGE;
             img.alt = recipe.title;
             img.className = 'search-result-image';
 
