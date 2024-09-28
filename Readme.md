@@ -1,8 +1,10 @@
-# RecipeSwap 🍳
+# RecipeSwap 🍳🥘🍽️
 
-RecipeSwap is a dynamic web application and blog that connects food enthusiasts, offering a platform to share, discover, and explore delicious recipes. Elevate your culinary skills, find inspiration for your next meal, and engage with a community of passionate cooks!
+RecipeSwap is a dynamic web application and blog that connects food enthusiasts, offering a platform to share, discover, and explore delicious recipes. Elevate your culinary skills, find inspiration for your next meal, and engage with a community of passionate cooks! 🌟
 
-## Table of Contents
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e222e18c-784b-4a33-8ce0-84b197de2ad1/deploy-status)](https://app.netlify.com/sites/recipe-swap/deploys)
+
+## Table of Contents 📚
 
 1. [Quick Links](#quick-links)
 2. [Features](#features)
@@ -11,59 +13,38 @@ RecipeSwap is a dynamic web application and blog that connects food enthusiasts,
 5. [User Authentication Flow](#user-authentication-flow)
 6. [Contributing](#contributing)
 7. [License](#license)
-8. [Get in Touch](#get-in-touch)
+8. [Contact](#contact)
 
-## Quick Links
+## Quick Links 🔗
 
-- 🌐 [Live Demo](https://recipe-swap.netlify.app/)
-- 📧 [Contact Me](mailto:vkavouras@proton.me)
-- 🐙 [GitHub Repository](https://github.com/dacrab/RecipeSwap)
+- [Live Demo](https://recipe-swap.netlify.app/)
+- [GitHub Repository](https://github.com/dacrab/RecipeSwap)
 
-## Features
+## Features ✨
 
-### 🍽️ Diverse Recipe Collection & Blog
-- Explore recipes and blog posts for every occasion and skill level
-- Quick weeknight dinners to gourmet desserts, with accompanying stories and tips
+### Recipe and Blog Platform 📝
+- Diverse recipe collection and blog posts
+- Write and read blog posts about cooking techniques, ingredients, and culinary adventures
+- Multilingual support for recipes (e.g., English, Greek)
 
-### 🖥️ User-Friendly Interface
-- Intuitive design for easy recipe browsing, blog reading, and content sharing
-- Responsive layout for seamless access on all devices
+### User Experience 🖥️
+- User-friendly, responsive interface
+- Advanced search functionality with real-time suggestions
+- Keyboard shortcuts for quick navigation
 
-### 🔐 Secure User Authentication
-- Create an account and verify your email
-- Log in securely to access personalized features and contribute to the blog
-- Password reset functionality for forgotten passwords
+### User Engagement 👥
+- Secure user authentication and email verification
+- Personalized user profiles
+- Community-driven rating and review system
+- Comment and discuss blog posts
 
-### 👤 Personalized User Profiles
-- Save your favorite recipes and blog posts
-- Share your own culinary creations and food stories
-
-### 🔍 Advanced Search Functionality
-- Find recipes and blog posts quickly by ingredients, dish names, or topics
-- Real-time search suggestions as you type
-
-### ⭐ Community-Driven Rating System
-- Rate and review recipes and blog posts
-- Help others discover the best dishes and most insightful content
-
-### ✍️ Blog Functionality
-- Read and write blog posts about cooking techniques, ingredient spotlights, and culinary adventures
-- Comment on and discuss blog posts with other food enthusiasts
-
-### 🌐 Multilingual Support
-- Recipes available in multiple languages (e.g., English, Greek)
-
-### ⌨️ Keyboard Shortcuts
-- Quick navigation using keyboard shortcuts (e.g., Ctrl+/ for search, Ctrl+H for home)
-
-## Technology Stack
+## Technology Stack 💻
 
 - Frontend: HTML5, CSS3, JavaScript
 - Backend & Authentication: Firebase
-- Icons: Font Awesome
-- Fonts: Google Fonts (Poppins, Roboto, Lobster, Montserrat, Open Sans)
+- UI Enhancements: Font Awesome, Google Fonts
 
-## Getting Started
+## Getting Started 🚀
 
 1. Clone the repository:
    ```
@@ -77,18 +58,47 @@ RecipeSwap is a dynamic web application and blog that connects food enthusiasts,
    - Create a new project on [Firebase](https://firebase.google.com/)
    - Copy your Firebase configuration
    - Update `config.js` with your Firebase credentials
+   - Enable the following services in your Firebase project:
+     - Authentication (with Email/Password provider)
+     - Firestore Database
+     - Storage
+   - Set up Firestore security rules:
+     ```
+     rules_version = '2';
+     service cloud.firestore {
+       match /databases/{database}/documents {
+         match /{document=**} {
+           allow read, write: if request.auth != null;
+         }
+       }
+     }
+     ```
+   - Set up Storage security rules:
+     ```
+     rules_version = '2';
+     service firebase.storage {
+       match /b/{bucket}/o {
+         match /{allPaths=**} {
+           allow read, write: if request.auth != null;
+         }
+       }
+     }
+     ```
+   - Import necessary Firebase modules as shown in `script.js`
+   - Initialize Firebase with your configuration in `script.js`
+   - Set up authentication state listener and other Firebase-related functions as demonstrated in `script.js`
 4. Open `index.html` in your web browser
 
-## User Authentication Flow
+## User Authentication Flow 🔐
 
 1. **Sign Up**: Provide username, email, and password
 2. **Email Verification**: Click the link sent to your email
-3. **Login**: Use verified credentials to access your account and features
-4. **Password Reset**: Use the "Forgot Password" feature if needed
+3. **Login**: Use verified credentials to access your account
+4. **Password Reset**: Available through "Forgot Password" feature
 
-## Contributing
+## Contributing 🤝
 
-We welcome contributions to both the recipe platform and blog! Here's how you can help improve RecipeSwap:
+We welcome contributions! To contribute:
 
 1. Fork the project
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -96,13 +106,13 @@ We welcome contributions to both the recipe platform and blog! Here's how you ca
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a pull request
 
-## License
+## License 📄
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Get in Touch
+## Contact 📧
 
-- 🐙 [Github](https://github.com/dacrab)
-- 📧 [Contact Me](mailto:vkavouras@proton.me)
+- GitHub: [dacrab](https://github.com/dacrab)
+- Email: [vkavouras@proton.me](mailto:vkavouras@proton.me)
 
-Happy cooking and blogging with RecipeSwap! 👨‍🍳👩‍🍳📝
+Happy cooking and blogging with RecipeSwap! 👨‍🍳👩‍🍳📝🍽️
