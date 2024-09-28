@@ -16,7 +16,7 @@ RecipeSwap is a dynamic web application and blog that connects food enthusiasts,
 ## Quick Links
 
 - 🌐 [Live Demo](https://recipe-swap.netlify.app/)
-- 📧 [Contact Me](mailto:vkaouras@proton.me)
+- 📧 [Contact Me](mailto:vkavouras@proton.me)
 - 🐙 [GitHub Repository](https://github.com/dacrab/RecipeSwap)
 
 ## Features
@@ -59,7 +59,7 @@ RecipeSwap is a dynamic web application and blog that connects food enthusiasts,
 ## Technology Stack
 
 - Frontend: HTML5, CSS3, JavaScript
-- Backend & Authentication: Supabase
+- Backend & Authentication: Firebase
 - Icons: Font Awesome
 - Fonts: Google Fonts (Poppins, Roboto, Lobster, Montserrat, Open Sans)
 
@@ -73,10 +73,10 @@ RecipeSwap is a dynamic web application and blog that connects food enthusiasts,
    ```
    cd RecipeSwap
    ```
-3. Set up Supabase:
-   - Create a new project on [Supabase](https://supabase.com/)
-   - Copy your project URL and anon key
-   - Update `config.js` with your Supabase credentials
+3. Set up Firebase:
+   - Create a new project on [Firebase](https://firebase.google.com/)
+   - Copy your Firebase configuration
+   - Update `config.js` with your Firebase credentials
 4. Open `index.html` in your web browser
 
 ## User Authentication Flow

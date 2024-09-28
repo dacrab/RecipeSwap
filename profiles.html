@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<script src="script.js" type="module"></script>
 </head>
-<body>
+<body class="profile-page">
 	<header>
 		<h1><i class="fas fa-utensils"></i> RecipeSwap</h1>
 		<nav>
@@ -22,39 +22,70 @@
 			</ul>
 		</nav>
 	</header>
+
 	<main>
 		<section class="profile">
 			<div class="profile-header">
-				<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Profile picture of George Papadopoulos" class="profile-picture">
+				<img id="profile-picture" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Profile picture" class="profile-picture">
 				<div class="profile-info">
-					<h2>George Papadopoulos</h2>
-					<p><i class="fas fa-envelope"></i> giorgos.papadopoulos@gmail.com</p>
-					<p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
-					<p><i class="fas fa-heart"></i> Cooking, Traveling, Photos</p>
-					<button class="button"><i class="fas fa-edit"></i> Edit Profile</button>
+					<h2 id="profile-username"><i class="fas fa-user"></i></h2>
+					<p id="profile-email"><i class="fas fa-envelope"></i></p>
+					<p id="profile-location"><i class="fas fa-map-marker-alt"></i></p>
+					<p id="profile-interests"><i class="fas fa-heart"></i></p>
+					<button id="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
 				</div>
 			</div>
+
+			<div id="edit-profile-form" style="display: none;">
+				<h3>Edit Profile</h3>
+				<form id="update-profile-form">
+					<div class="field">
+						<input type="text" id="edit-location" name="location" placeholder=" ">
+						<label for="edit-location"><i class="fas fa-map-marker-alt"></i> Location</label>
+					</div>
+					<div class="field">
+						<input type="text" id="edit-interests" name="interests" placeholder=" ">
+						<label for="edit-interests"><i class="fas fa-heart"></i> Interests (comma-separated)</label>
+					</div>
+					<div class="field">
+						<input type="file" id="profile-picture-upload" name="avatar" accept="image/*">
+						<label for="profile-picture-upload"><i class="fas fa-upload"></i> Upload Profile Picture</label>
+					</div>
+					<div class="field">
+						<button type="submit"><i class="fas fa-save"></i> Save Changes</button>
+					</div>
+				</form>
+			</div>
+
 			<div class="user-recipes">
 				<h2><i class="fas fa-book"></i> My Recipes</h2>
-				<div class="recipe-grid">
-					<article class="recipe-card">
-						<img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Traditional Greek Easter soup">
-						<h3><i class="fa-solid fa-bowl-food"></i> Grandma's Easter Soup</h3>
-						<p>The traditional soup eaten on the evening of Holy Saturday after the Resurrection, cooked with liver and lamb intestines, vegetables and herbs.</p>
-						<a href="recipes/mageiritsa.html" class="button"><i class="fas fa-eye"></i> View Recipe</a>
-					</article>
-					<article class="recipe-card">
-						<img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Pancakes in the toaster">
-						<h3><i class="fas fa-bread-slice"></i> Pancakes in the Toaster</h3>
-						<p>If you're looking for the perfect sweet recipe for Sunday brunch, then make pancakes in the toaster. Easy, quick and without using a pan.</p>
-						<a href="recipes/pancakes.html" class="button"><i class="fas fa-eye"></i> View Recipe</a>
-					</article>
+				<button id="add-recipe-btn"><i class="fas fa-plus"></i> Add New Recipe</button>
+				<div id="recipe-grid" class="recipe-grid">
+					<!-- Recipes will be dynamically added here -->
 				</div>
 			</div>
+
+			<button id="delete-account-btn" class="danger-btn"><i class="fas fa-user-slash"></i> Delete Account</button>
 		</section>
 	</main>
+
 	<footer>
 		<p><i class="far fa-copyright"></i> <span id="current-year"></span> RecipeSwap. All rights reserved.</p>
 	</footer>
+
+	<div id="delete-account-modal" class="modal">
+		<div class="modal-content">
+			<h2>Delete Account</h2>
+			<p>Are you sure you want to delete your account? This action cannot be undone.</p>
+			<div class="field">
+				<input type="password" id="delete-account-password" placeholder=" ">
+				<label for="delete-account-password">Enter your password to confirm</label>
+			</div>
+			<div class="modal-buttons">
+				<button id="confirm-delete" class="danger-btn">Yes, Delete My Account</button>
+				<button id="cancel-delete" class="secondary-btn">Cancel</button>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
